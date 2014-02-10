@@ -1,0 +1,21 @@
+(function(){
+  var map = <%= jsstring(text_rot_map) %>;
+  var map_len = map.length;
+  var out, text, k, c;
+
+  nodes = document.getElementsByClassName('rottext');
+
+  for (var i = 0, l = nodes.length, node = nodes[i]; i < l; i++) {
+    out = '';
+    text = node.getAttribute('data-text');
+
+    for(var j = 0, l = text.length; j < l; j++) {
+      c = text.charAt(j);
+      k = map.indexOf(c);
+      if (k >= 0) c = map.charAt((k + map_len / 2) % map_len);
+      out += c;
+    }
+
+    node.innerHTML = out;
+  };
+})();

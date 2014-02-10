@@ -1,0 +1,19 @@
+@media screen
+  html
+    min-height: 100%
+    background-color: $off-white
+    +background-image(url(noise.png), url(noise.png), url(noise.png), radial-gradient(center -20%, circle cover, white, darken($off-white, 40)))
+    background-attachment: fixed
+    background-size: 79px 79px, 101px 101px, 73px 73px, 100% 100%
+    background-position: 0 0, 5px 5px, 11px 11px, 0 0
+
+  #wrapper
+    width: 600px
+    margin: 0 auto
+    background: rgba(255,255,255,0.07)
+    border: 1px solid rgba(255, 255, 255, 0.14)
+    padding: 35px 35px 5px
+    +box-shadow(rgba(0, 0, 0, 0.03) 0 0 0 1px)
+
+  #header
+    margin: 0

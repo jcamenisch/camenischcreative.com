@@ -1,0 +1,13 @@
+@import "compass/css3/images"
+
+$size: 50px
+
+$color1: rgba(0,0,0,0)
+$color2: rgba(0,0,0,0.2)
+$stop1: 2.5*$size/5
+$stop2: $stop1 + 3px
+
+html
+  +background(radial-gradient(circle,$color1 $stop1,$color2 $stop1,$color2 $stop2, $color1 $stop2, $color1) 0 0, radial-gradient(circle,$color1 $stop1,$color2 $stop1,$color2 $stop2, $color1 $stop2, $color1) $size 0)
+  background-size: 2*$size $size
+  min-height: 100%

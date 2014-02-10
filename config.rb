@@ -45,6 +45,9 @@
 #   end
 # end
 
+require 'lib/text_rot'
+helpers TextRot
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'

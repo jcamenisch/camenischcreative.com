@@ -1,0 +1,37 @@
+doctype html
+html lang="en"
+  head
+    meta http-equiv="content-type" content="text/html; charset=utf-8"
+    - if @description
+      meta name="description" content=@description
+    - if @keywords
+      meta name="keywords" content=@keywords
+    title = @title || 'Camenisch Creative'
+    link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css"
+    link rel="icon" type="image/ico" href="/images/favicon.ico"
+    link rel="apple-touch-icon" href="/images/apple-touch-icon.png"
+
+    - if @extra_style then
+      link href="/stylesheets/#{@extra_style}" rel="stylesheet" type="text/css"
+    - if @extra_js then
+      - @extra_js.each do |extra_js|
+        script src="/javascripts/#{extra_js}" type="text/javascript"
+    - if @external_css then
+      - @external_css.each do |uri|
+        link href=uri rel="stylesheet" type="text/css"
+    script src="http://use.typekit.com/mwq2udz.js" type="text/javascript"
+    javascript:
+      try{Typekit.load();}catch(e){}
+    link href="/articles.xml" rel="alternate" type="application/atom+xml"
+    //= haml :analytics, layout: false
+
+    //- if local_stylesheet?
+    //  link href="/css/local.css" media="screen" rel="stylesheet" type="text/css"
+
+  body
+    #wrapper
+      #header
+        .headline
+          a href='/' title='Home' Camenisch Creative
+        p.tagline Custom programming &amp; design
+      = yield

@@ -1,0 +1,15 @@
+$primary-color: hsl(10, 93%, 31%)
+
+$triad-spread: 120deg
+
+$triad-color1: adjust-hue($primary-color, (180deg - $triad-spread/2))
+$triad-color2: adjust-hue($primary-color, (180deg + $triad-spread/2))
+
+$analogic-spread: 40deg
+
+$analogic-color1: adjust-hue($primary-color, $triad-spread/2)
+$analogic-color2: adjust-hue($primary-color, -$triad-spread/2)
+
+$accent-color: hsl(hue($primary-color), 100%, 15%)
+$highlight-color: hsl(hue($accent-color), 100%, 28%)
+$off-white: hsl(41, 15%, 92%)
