@@ -10,6 +10,9 @@
 # Ignore bundled gem files
 /vendor/bundle
 
+# Ignore binstubs
+/bin
+
 # Ignore the build directory
 /build
 
