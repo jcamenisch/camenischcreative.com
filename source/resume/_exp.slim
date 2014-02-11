@@ -1,0 +1,9 @@
+- from_date = Date.new(*from_month.split('/').reverse.map(&:to_i), 1)
+- to_date   = Date.new( *to_month .split('/').reverse.map(&:to_i), 1)
+- fmt_from  = from_date.strftime('%b, %Y')
+- fmt_to    = to_date.strftime('%b, %Y')
+- fmt_from.gsub(/, \d$/, '') if from_date.year == to_date.year
+
+h4
+  ' #{company}, #{title}
+  span.right #{fmt_from} to #{fmt_to}
