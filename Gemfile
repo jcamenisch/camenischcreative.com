@@ -7,6 +7,10 @@ gem 'middleman', '~>3.2.2'
 # Live-reloading plugin
 gem 'middleman-livereload', '~> 3.1.0'
 gem 'middleman-slim'
+gem 'middleman-s3_sync'
 
 # For faster file watcher updates on Windows:
 gem 'wdm', '~> 0.1.0', :platforms => [:mswin, :mingw]
+
+gem 'dotenv', github: 'bkeepers/dotenv'
+gem 'env_bang'
