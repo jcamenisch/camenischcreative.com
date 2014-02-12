@@ -4,6 +4,6 @@
 - fmt_to    = to_date.strftime('%b, %Y')
 - fmt_from.gsub(/, \d$/, '') if from_date.year == to_date.year
 
-h4
+h4.exp
   ' #{company}, #{title}
-  span.right #{fmt_from} to #{fmt_to}
+  span.right #{fmt_from}–#{fmt_to}
