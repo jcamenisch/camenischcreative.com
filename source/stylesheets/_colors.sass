@@ -1,15 +1,21 @@
-$primary-color: hsl(10, 93%, 31%)
+$primary-color: #FF6200
 
-$triad-spread: 120deg
+$triad-spread: 100deg
 
 $triad-color1: adjust-hue($primary-color, (180deg - $triad-spread/2))
 $triad-color2: adjust-hue($primary-color, (180deg + $triad-spread/2))
 
-$analogic-spread: 40deg
+$compliment: #1F7B67
 
-$analogic-color1: adjust-hue($primary-color, $triad-spread/2)
-$analogic-color2: adjust-hue($primary-color, -$triad-spread/2)
+$analogic-spread: 120deg
+
+$analogic-color1: adjust-hue($primary-color, $analogic-spread/2)
+$analogic-color2: adjust-hue($primary-color, -$analogic-spread/2)
 
 $accent-color: hsl(hue($primary-color), 100%, 15%)
-$highlight-color: hsl(hue($accent-color), 100%, 28%)
+$highlight-color: hsl(hue($primary-color), 100%, 28%)
+$action-color: $compliment
+$header-color: darken($primary-color, 18%)
 $off-white: hsl(41, 15%, 92%)
+
+$body-text-color: darken($primary-color, 40%)

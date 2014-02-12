@@ -7,7 +7,7 @@ html lang="en"
     - if @keywords
       meta name="keywords" content=@keywords
     title = @title || 'Camenisch Creative'
-    link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css"
+    link href="/stylesheets/all.css" media="all" rel="stylesheet" type="text/css"
     link rel="icon" type="image/ico" href="/images/favicon.ico"
     link rel="apple-touch-icon" href="/images/apple-touch-icon.png"
 
@@ -28,7 +28,7 @@ html lang="en"
     //- if local_stylesheet?
     //  link href="/css/local.css" media="screen" rel="stylesheet" type="text/css"
 
-  body
+  body class=@body_class
     #wrapper
       #header
         .headline
