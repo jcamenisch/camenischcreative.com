@@ -245,7 +245,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     optimist (3.0.0)
     pmap (1.0.1)
-    rack (1.6.11)
+    rack (1.6.12)
     rack-livereload (0.3.15)
       rack
     rack-test (0.6.2)
